@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import { Container } from 'react-bootstrap'
+import './App.css'
+import NavComponent from './components/NavComponent'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import GenresComponent from './components/GenresComponent'
+import RowMovieComponent from './components/RowMovieComponent'
+import FooterComponent from './components/FooterComponent'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <div className="App">
+        <header>
+          <NavComponent />
+        </header>
+        <main>
+          <Container fluid className="px-3">
+            <GenresComponent />
+            <h2 className="text-light text-start ">Trending Now</h2>
+            <RowMovieComponent unica={1} Categoria="star wars" />
+            <h2 className="text-light text-start ">Watch it Again</h2>
+            <RowMovieComponent unica={2} Categoria="rambo" />
+            <h2 className="text-light text-start ">New Releases</h2>
+            <RowMovieComponent unica={3} Categoria="harry potter" />
+          </Container>
+        </main>
+        <footer>
+          <FooterComponent />
+        </footer>
+      </div>
+    </>
+  )
 }
 
-export default App;
+export default App

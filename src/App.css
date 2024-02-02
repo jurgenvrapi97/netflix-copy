@@ -7,6 +7,26 @@
   pointer-events: none;
 }
 
+body {
+  background-color: black !important;
+}
+
+header {
+  background-color: black !important;
+}
+
+footer a {
+  color: #838383;
+  text-decoration: none;
+  font-size: 0.8rem;
+}
+.col img {
+  transition: transform 0.2s;
+}
+
+.col img:hover {
+  transform: scale(1.1);
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
