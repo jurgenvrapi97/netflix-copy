@@ -1,6 +1,7 @@
 import React from 'react'
 import { Navbar, Nav } from 'react-bootstrap'
 import { Search, Bell, PersonCircle } from 'react-bootstrap-icons'
+import { Link } from 'react-router-dom'
 
 function NavComponent() {
   return (
@@ -24,7 +25,7 @@ function NavComponent() {
             <Nav.Link className="text-light" href="#" active>
               Home
             </Nav.Link>
-            <Nav.Link className="text-light" href="#">
+            <Nav.Link className="text-light" as={Link} to="/TvShowComponent">
               TV Shows
             </Nav.Link>
             <Nav.Link className="text-light" href="#">
