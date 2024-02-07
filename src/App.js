@@ -8,6 +8,7 @@ import FooterComponent from './components/FooterComponent'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import TvShowComponent from './components/TvShowComponent'
 import MovieDetails from './components/MovieDetails'
+
 function App() {
   return (
     <>
@@ -27,6 +28,7 @@ function App() {
               <h2 className="text-light text-start ">New Releases</h2>
               <RowMovieComponent unica={3} Categoria="naruto" />{' '}
               <Routes>
+                <Route path="/" element={<TvShowComponent />} />
                 <Route path="/tvshowcomponent" element={<TvShowComponent />} />
                 <Route
                   path="/movie-details/:movieId"
