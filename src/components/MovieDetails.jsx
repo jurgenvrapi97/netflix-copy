@@ -11,6 +11,7 @@ function MovieDetails() {
   const navigate = useNavigate()
 
   useEffect(() => {
+    console.log(movieId)
     fetch(`http://www.omdbapi.com/?apikey=efe20984&i=${movieId}`)
       .then((response) => response.json())
       .then((data) => setMovieDetails(data))
@@ -41,7 +42,7 @@ function MovieDetails() {
         <p>{movieDetails.Plot}</p>
         <h5>Comments</h5>
         {comments.map((comment) => (
-          <p key={comment.id}>{comment.text}</p>
+          <p key={comment._id}>{comment.comment}</p>
         ))}
       </Modal.Body>
     </Modal>
